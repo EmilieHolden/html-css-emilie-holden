@@ -1,0 +1,74 @@
+.trail {
+  font-size: 25px;
+  color: #3c3a3a;
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  margin-left: 75px;
+}
+
+.main-boxes {
+  display: flex;
+}
+
+.image-product-details {
+  max-width: 556px;
+  max-height: auto;
+  padding: 61px;
+  border-style: solid;
+  border-color: #ccc9c9;
+  margin-left: 75px;
+}
+
+.product-info {
+  width: 520px;
+  padding: 61px;
+  border-style: solid;
+  border-color: #ccc9c9;
+  margin-left: 40px;
+  margin-right: 75px;
+}
+
+.color {
+  height: 52px;
+  width: 52px;
+  background: #706548;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.color:hover {
+  height: 50px;
+  width: 50px;
+  background: #706548;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
+
+.size {
+  height: 52px;
+  width: 52px;
+  background: #fff;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #3c3a3a;
+  color: #3c3a3a;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.size:hover {
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
+
+.size-selector {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

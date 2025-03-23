@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Fill in your payment and shipping details to receive your new jacket. "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RainyDays | Checkout</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/payment-details.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/9cf112f2f4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="orange-header">
+      <img
+        src="rainydays-images/RainyDays_Logo.png"
+        alt="RainyDays logo"
+        class="header-logo"
+      />
+      <nav class="main-nav">
+        <a href="index.html"><i class="fa-thin fa-magnifying-glass"></i></a>
+        <a href="index.html"><i class="fa-thin fa-bars"></i></a>
+        <a href="shopping-cart.html"><i class="fa-thin fa-bag-shopping"></i></a>
+      </nav>
+    </header>
+    <main>
+      <h1>Checkout</h1>
+      <section>
+        <h2>Payment details</h2>
+        <form class="form-container">
+          <section class="form-group-payment">
+            <div class="input-group">
+              <label for="name">First name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="name">Last name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="phone">Card number</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-card-details">
+              <div class="input-group">
+                <label for="email">Expiration date</label>
+                <input
+                  type="date"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="email">CVC</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+
+          <legend>Delivery address</legend>
+          <section class="form-group-delivery">
+            <div class="input-group delivery-first-name">
+              <label for="name">First name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group delivery-last-name">
+              <label for="name">Last name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group delivery-email">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group delivery-phone">
+              <label for="phone">Phone number</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group delivery-address">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                name="email"
+                id="address"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="input-group delivery-postal">
+              <label for="zipcode">Postal code</label>
+              <input
+                type="text"
+                name="zipcode"
+                id="zipcode"
+                class="form-input"
+                required
+              />
+            </div>
+          </section>
+        </form>
+      </section>
+      <section>
+        <h2>Order summary</h2>
+        <p>1 items in cart</p>
+
+        <img src="rainydays-images/jacket1.jpg" alt="red jacket with zipper" />
+        <p>Frost Peak</p>
+        <p>42</p>
+        <p>Qty: 1</p>
+        <p>1500 nok</p>
+        <div>
+          <p>Shipping</p>
+          <p>0 nok</p>
+        </div>
+        <div>
+          <p>Total</p>
+          <p>1500 nok</p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <p>About us | Contact us | Return policy | FAQ</p>
+    <div class="icons-footer">
+      <i class="fa-light fa-play"></i>
+      <i class="fa-light fa-comment"></i>
+      <i class="fa-light fa-hashtag"></i>
+    </div>
+    <p>RainyDays &copy;</p>
+  </footer>
+</html>

@@ -1,0 +1,33 @@
+.categories-list {
+  font-size: 20px;
+  padding-left: 65px;
+  list-style-type: none;
+  line-height: 50px;
+  border-right: solid #ccc9c9;
+}
+
+/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
+.product-img {
+  height: 315px;
+  width: fit-content;
+  margin-top: 15px;
+  margin-bottom: auto;
+}
+
+/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
+.product-card {
+  width: 372px;
+  height: 507px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0px 20px 0px 0px;
+  border: none;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-color: #ccc9c9;
+}

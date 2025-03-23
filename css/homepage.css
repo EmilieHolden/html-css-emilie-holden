@@ -1,0 +1,202 @@
+.homepage-header {
+  background-image: url(../rainydays-images/emmeli-m-SssAiutQtXE-unsplash.jpg);
+  height: 65vh;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
+.homepage-logo-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.homepage-logo {
+  width: 200px;
+  height: auto;
+
+  @media (width > 600px) {
+    width: 447px;
+  }
+}
+
+.homepage-nav {
+  background-color: #0a3641;
+  padding: 17px 21px;
+
+  @media (width > 600px) {
+    background: transparent;
+  }
+}
+
+.homepage-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.homepage-nav a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.homepage-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (width > 700px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+@media (width > 700px) {
+  .subscribtion-container {
+    grid-area: 5 / 1 / 7 /2;
+  }
+  .new-collection {
+    grid-area: 1 / 2 / 4 / 3;
+  }
+  .bestsellers {
+    grid-area: 4 / 2 / 7 / 3;
+  }
+  .sale-container {
+    grid-area: 1 / 1 / 5 / 2;
+  }
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.valentinesday-sale {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../rainydays-images/sales-img.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  @media (width > 600px) {
+    height: 100%;
+  }
+}
+
+.text-sale {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 1rem;
+
+  @media (width > 600px) {
+    padding-top: 100px;
+    font-size: 44px;
+  }
+}
+
+.sale-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+
+  @media (width > 600px) {
+    font-size: 38px;
+  }
+}
+
+.subscribtion-container {
+  background-color: #a4b5b9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  gap: 10px;
+
+  @media (width < 600px) {
+    display: block;
+  }
+}
+
+.subscribtion-img {
+  background-image: url("../rainydays-images/sub-img.jpg");
+  width: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (width < 600px) {
+    display: none;
+  }
+}
+
+.subscribtion-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+  padding: 60px;
+}
+
+.subscribtion-form input {
+  font-size: 13px;
+  width: 100%;
+  padding: 4px 0 4px 5px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: rgb(200, 204, 208) 2px 2px 4px 0px inset,
+    rgba(255, 255, 255, 0.3) -2px -2px 4px 1px inset;
+}
+
+.subscribtion-text {
+  font-size: 21px;
+}
+
+.submit-button {
+  background-color: #0a3641;
+  color: #fff;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 100%;
+  padding: 3px 0;
+}
+
+/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
+.product-card {
+  border-style: solid;
+  border-color: #ccc9c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+
+/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
+.product-img {
+  width: 60px;
+  height: 70px;
+  object-fit: cover;
+
+  @media (width > 600px) {
+    width: 330px;
+    height: 350px;
+  }
+}

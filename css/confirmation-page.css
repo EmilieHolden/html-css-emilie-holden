@@ -1,0 +1,15 @@
+.box {
+  border-style: solid;
+  border-color: #ccc9c9;
+  max-width: 1012px;
+  max-height: 713px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.information-container,
+.summary-container {
+  border-style: solid;
+  border-color: #ccc9c9;
+}

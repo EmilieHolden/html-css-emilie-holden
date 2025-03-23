@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+body,
+button {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 27px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.orange-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  background-color: #f6861e;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding: 50px 50px 50px 175px;
+}
+
+.header-logo {
+  max-width: 173px;
+  max-height: 100%;
+}
+
+/* HOMEPAGE NAVIGATION */
+.center {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.main-nav a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 25px;
+  flex-direction: row;
+  justify-content: end;
+  background-color: #f6861e;
+}
+
+/* BUTTONS */
+.add-to-cart-button {
+  font-size: 16px;
+  background-color: #f6861e;
+  color: #000000;
+  border-color: transparent;
+  border-radius: 17px;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 25px -10px #000;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 283px;
+  background-color: #66848a;
+  color: #fff;
+}
+
+footer p {
+  color: #fff;
+  font-size: 14;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 40px;
+}
+
+.icons-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 30px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
