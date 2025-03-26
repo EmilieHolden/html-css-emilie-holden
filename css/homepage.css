@@ -22,27 +22,6 @@
   }
 }
 
-.homepage-nav {
-  background-color: #0a3641;
-  padding: 17px 21px;
-
-  @media (width > 600px) {
-    background: transparent;
-  }
-}
-
-.homepage-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.homepage-nav a {
-  color: #fff;
-  font-size: 20px;
-}
-
 .homepage-content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -69,10 +48,19 @@
   }
 }
 
+.h1-homepage {
+  font-size: 20px;
+}
+
 .product-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+.new-collection,
+.bestsellers {
+  margin: 0 10px;
 }
 
 .valentinesday-sale {
@@ -177,8 +165,7 @@
   padding: 3px 0;
 }
 
-/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
-.product-card {
+.homepage-product-card {
   border-style: solid;
   border-color: #ccc9c9;
   display: flex;
@@ -189,8 +176,7 @@
   padding: 3rem 1rem;
 }
 
-/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
-.product-img {
+.homepage-product-img {
   width: 60px;
   height: 70px;
   object-fit: cover;

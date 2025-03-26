@@ -22,26 +22,42 @@
     />
   </head>
   <body>
-    <header class="orange-header">
-      <a href="index.html"
-        ><img
+    <header class="nav-header">
+      <nav class="homepage-nav">
+        <ul>
+          <li>
+            <a href="index.html"
+              ><span class="desktop-homepage-nav">Home</span
+              ><i class="fa-thin fa-house nav-icon mobile-icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="products-page.html">
+              <span class="desktop-homepage-nav">Products</span
+              ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="shopping-cart.html"
+              ><i class="fa-thin fa-bag-shopping nav-icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="coming-soon.html"
+              ><i class="fa-thin fa-magnifying-glass nav-icon"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="orange-header">
+        <img
           src="rainydays-images/RainyDays_Logo.png"
           alt="RainyDays logo"
           class="header-logo"
-      /></a>
-      <nav class="main-nav">
-        <a href="index.html"><i class="fa-thin fa-magnifying-glass"></i></a>
-        <a href="index.html"><i class="fa-thin fa-bars"></i></a>
-        <a href="shopping-cart.html"><i class="fa-thin fa-bag-shopping"></i></a>
-      </nav>
+        />
+      </div>
     </header>
     <main>
-      <!-- TODO bør være en nav, hvor "all items" er link tilbake til products siden -->
-      <div class="trail">
-        <p>All items</p>
-        <p>></p>
-        <p>Frost Peak</p>
-      </div>
       <div class="main-boxes">
         <img
           src="rainydays-images/jacket1.jpg"
@@ -50,17 +66,17 @@
         />
         <div class="product-info">
           <h1>Frost Peak</h1>
-          <p>1500 nok</p>
-          <p>Color:</p>
+          <h2>1500 nok</h2>
+          <h3>Color:</h3>
           <div class="color"></div>
-          <p>Size:</p>
+          <h3>Size:</h3>
           <div class="size-selector">
             <div class="size"><p>42</p></div>
             <div class="size"><p>44</p></div>
             <div class="size"><p>46</p></div>
           </div>
           <button class="add-to-cart-button">Add to cart</button>
-          <p>Description:</p>
+          <h3>Description:</h3>
           <p>
             This sporty fleece jacket offers warmth, breathability, and
             flexibility for active wear. Made from moisture-wicking fleece, it

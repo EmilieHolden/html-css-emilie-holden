@@ -1,32 +1,27 @@
-.trail {
-  font-size: 25px;
-  color: #3c3a3a;
+.main-boxes {
+  border: solid #ccc9c9;
+  padding: 40px;
   display: flex;
-  justify-content: start;
-  gap: 15px;
-  margin-left: 75px;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (width >600px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
 }
 
-.main-boxes {
-  display: flex;
+.image-product-details {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.product-info {
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .image-product-details {
   max-width: 556px;
   max-height: auto;
-  padding: 61px;
-  border-style: solid;
-  border-color: #ccc9c9;
-  margin-left: 75px;
-}
-
-.product-info {
-  width: 520px;
-  padding: 61px;
-  border-style: solid;
-  border-color: #ccc9c9;
-  margin-left: 40px;
-  margin-right: 75px;
 }
 
 .color {
@@ -34,7 +29,12 @@
   width: 52px;
   background: #706548;
   border-radius: 50%;
-  margin-left: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .color:hover {
@@ -47,15 +47,13 @@
 }
 
 .size {
-  height: 52px;
-  width: 52px;
+  font-size: 17px;
   background: #fff;
   border-radius: 50%;
   border-style: solid;
   border-color: #3c3a3a;
   color: #3c3a3a;
-  text-align: center;
-  margin-left: 10px;
+  padding: 15px;
 }
 
 .size:hover {

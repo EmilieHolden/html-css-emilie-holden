@@ -1,3 +1,15 @@
+.payment-details-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (width > 600px) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
 .form-input {
   border-radius: 10px;
   border-color: #ccc9c9;
@@ -7,12 +19,6 @@
   padding: 5px;
 }
 
-.form-container {
-  border-style: solid;
-  border-color: #ccc9c9;
-  padding: 20px;
-}
-
 .input-group {
   display: flex;
   flex-direction: column;
@@ -20,9 +26,11 @@
 }
 
 .form-group-payment {
+  border: solid #ccc9c9;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  padding: 20px;
 }
 
 .input-card-details {
@@ -32,10 +40,12 @@
 }
 
 .form-group-delivery {
+  border: solid #ccc9c9;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 16px;
+  padding: 20px;
 }
 
 .delivery-first-name {
@@ -55,4 +65,18 @@
 }
 .delivery-postal {
   grid-area: 3 / 4 / 4 / 5;
+}
+
+.delivery-address-container {
+  padding-top: 20px;
+}
+
+.order-summary-content {
+  border: solid #ccc9c9;
+  padding: 20px;
+}
+
+.payment-details-img {
+  max-width: 105px;
+  height: auto;
 }

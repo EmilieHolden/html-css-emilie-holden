@@ -1,20 +1,33 @@
 .categories-list {
   font-size: 20px;
-  padding-left: 65px;
   list-style-type: none;
-  line-height: 50px;
-  border-right: solid #ccc9c9;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 20px 30px 20px;
 }
 
-/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
+.category {
+  text-align: center;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.all-items {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.sale {
+  color: red;
+}
+
 .product-img {
   height: 315px;
   width: fit-content;
-  margin-top: 15px;
-  margin-bottom: auto;
+  padding: 20px;
 }
 
-/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
 .product-card {
   width: 372px;
   height: 507px;
@@ -22,12 +35,43 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0px 20px 0px 0px;
+  margin: 0 20px 0 0;
   border: none;
 }
 .products {
   display: flex;
   flex-wrap: wrap;
-  border-style: solid;
-  border-color: #ccc9c9;
+  border: solid #ccc9c9;
+  margin: 0 20px;
+
+  @media (width > 600px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.product-card1 {
+  grid-area: 1 / 6 / 2 / 7;
+}
+.product-card2 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.product-card3 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.product-card4 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.product-card5 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.product-card6 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.product-card7 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.product-card8 {
+  grid-area: 3 / 1 / 4 / 2;
 }

@@ -21,33 +21,55 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header class="orange-header">
+  <header class="nav-header">
+    <nav class="homepage-nav">
+      <ul>
+        <li>
+          <a href="index.html"
+            ><span class="desktop-homepage-nav">Home</span
+            ><i class="fa-thin fa-house nav-icon mobile-icon"></i
+          ></a>
+        </li>
+        <li>
+          <a href="products-page.html">
+            <span class="desktop-homepage-nav">Products</span
+            ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i
+          ></a>
+        </li>
+        <li>
+          <a href="shopping-cart.html"
+            ><i class="fa-thin fa-bag-shopping nav-icon"></i
+          ></a>
+        </li>
+        <li>
+          <a href="coming-soon.html"
+            ><i class="fa-thin fa-magnifying-glass nav-icon"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="orange-header">
       <img
         src="rainydays-images/RainyDays_Logo.png"
         alt="RainyDays logo"
         class="header-logo"
       />
-      <nav class="main-nav">
-        <a href="index.html"><i class="fa-thin fa-magnifying-glass"></i></a>
-        <a href="index.html"><i class="fa-thin fa-bars"></i></a>
-        <a href="shopping-cart.html"><i class="fa-thin fa-bag-shopping"></i></a>
-      </nav>
-    </header>
+    </div>
+  </header>
+  <body>
     <main>
       <h1>Products</h1>
       <section>
         <ul class="categories-list">
-          <li>All items</li>
-          <li>Women</li>
-          <li>Men</li>
-          <li>Sale</li>
+          <li class="category all-items">All items</li>
+          <li class="category">Women</li>
+          <li class="category">Men</li>
+          <li class="category sale">Sale</li>
         </ul>
       </section>
       <section>
-        <h2>All items</h2>
         <section class="products">
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket1.jpg"
               alt="red jacket with zipper"
@@ -56,7 +78,7 @@
             <h3>Frost Peak</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket2.jpg"
               alt="red pufferjacket"
@@ -65,7 +87,7 @@
             <h3>Storm Flex Athletic</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket3.jpg"
               alt="long, black rainjacket"
@@ -74,7 +96,7 @@
             <h3>Frost Barrier</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket4.jpg"
               alt="pink skiingjacket"
@@ -83,7 +105,7 @@
             <h3>Polar Pulse</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket5.jpg"
               alt="red and black skiingjacket"
@@ -92,7 +114,7 @@
             <h3>Frost Peak</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket6.jpg"
               alt="teal softshelljacket"
@@ -101,7 +123,7 @@
             <h3>Storm Flex Athletic</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket7.jpg"
               alt="red softshelljacket"
@@ -110,7 +132,7 @@
             <h3>Frost Barrier</h3>
             <button class="add-to-cart-button">Add to cart</button>
           </div>
-          <div class="product-card">
+          <div class="product-card mobile-product-card">
             <img
               src="rainydays-images/jacket8.jpg"
               alt="green goretexjacket"

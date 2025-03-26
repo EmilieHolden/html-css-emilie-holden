@@ -19,17 +19,40 @@
     />
   </head>
   <body>
-    <header class="orange-header">
-      <img
-        src="rainydays-images/RainyDays_Logo.png"
-        alt="RainyDays logo"
-        class="header-logo"
-      />
-      <nav class="main-nav">
-        <a href="index.html"><i class="fa-thin fa-magnifying-glass"></i></a>
-        <a href="index.html"><i class="fa-thin fa-bars"></i></a>
-        <a href="shopping-cart.html"><i class="fa-thin fa-bag-shopping"></i></a>
+    <header class="nav-header">
+      <nav class="homepage-nav">
+        <ul>
+          <li>
+            <a href="index.html"
+              ><span class="desktop-homepage-nav">Home</span
+              ><i class="fa-thin fa-house nav-icon mobile-icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="products-page.html">
+              <span class="desktop-homepage-nav">Products</span
+              ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="shopping-cart.html"
+              ><i class="fa-thin fa-bag-shopping nav-icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="coming-soon.html"
+              ><i class="fa-thin fa-magnifying-glass nav-icon"></i
+            ></a>
+          </li>
+        </ul>
       </nav>
+      <div class="orange-header">
+        <img
+          src="rainydays-images/RainyDays_Logo.png"
+          alt="RainyDays logo"
+          class="header-logo"
+        />
+      </div>
     </header>
     <main class="shopping-cart-container">
       <h1>Shopping cart</h1>
@@ -38,21 +61,25 @@
         <img
           src="rainydays-images/jacket1.jpg"
           alt="red jacket with zipper"
-          class="product-img"
+          class="checkout-product-img"
         />
         <p class="product-name">Frost Peak</p>
         <p class="product-size">42</p>
         <p class="qty">- 1 +</p>
         <p class="product-price">1500 nok</p>
       </div>
-      <div class="total-box">
-        <p class="shipping">Shipping</p>
-        <p class="shipping-price">0 nok</p>
-        <p class="total">Total</p>
-        <p class="total-price">1500 nok</p>
-        <a href="payment-details.html" class="checkout">
-          <button>Checkout</button>
-        </a>
+        <div class="shipping-box">
+          <p class="shipping">Shipping</p>
+          <p class="shipping-price">0 nok</p>
+        </div>
+        <div class="total-box">
+          <p class="total">Total</p>
+          <p class="total-price">1500 nok</p>
+        </div>
+      </div>
+
+      <div class="checkout-continue">
+        <a href="payment-details.html" class="checkout">Checkout</a>
         <a href="products-page.html" class="continue">Continue shopping</a>
       </div>
     </main>

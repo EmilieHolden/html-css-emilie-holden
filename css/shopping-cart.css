@@ -3,91 +3,65 @@
   height: fit-content;
   border-style: solid;
   border-color: #ccc9c9;
+  padding: 20px;
+}
+
+.checkout-product-img {
+  max-width: 105px;
+  min-height: auto;
 }
 
 .item-number {
   border-bottom: solid #ccc9c9;
-  padding: 20px 0px 10px 30px;
+  padding: 20px 0 10px 0;
 }
 
 .in-cart {
   border-bottom: solid #ccc9c9;
-  padding-left: 30px;
-  display: grid;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 20px;
+  gap: 50px;
 }
 
-.in-cart img {
-  grid-area: 1 / 1 / 4 / 2;
-}
-.product-name {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.product-size {
-  grid-area: 2 / 2 / 3 / 3;
-}
-.qty {
-  grid-area: 3 / 2 / 4 / 3;
-}
-.product-price {
-  grid-area: 3 / 6 / 4 / 7;
+.shipping-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .total-box {
-  padding: 30px 50px 20px 50px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
-.shipping {
-  grid-area: 1 / 1 / 2 / 2;
-  text-align: left;
-}
-
-.total {
-  grid-area: 2 / 1 / 3 / 2;
-  text-align: left;
-}
-
-.shipping-price {
-  grid-area: 1 / 5 / 2 / 6;
-  text-align: end;
-}
-
-.total-price {
-  grid-area: 2 / 5 / 3 / 6;
-  text-align: end;
-}
-
-.continue {
-  grid-area: 4 / 3 / 5 / 4;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
+.checkout-continue {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 20px;
 }
 
 .checkout {
-  grid-area: 3 / 1 / 4 / 6;
-}
-
-.checkout button {
+  text-decoration: none;
+  text-align: center;
   width: 100%;
-  padding: 20px 15px 20px 15px;
+  padding: 20px 15px;
   background-color: #66848a;
   border: none;
   border-radius: 17px;
   font-size: 20px;
   color: #fff;
   box-shadow: 5px 5px 25px -10px #000;
-  align-self: center;
 }
 
-/* TODO definers samme class i flere filer bør enten ha forskjellig navn eller være i en felles fil */
-.product-img {
-  max-width: 105px;
-  min-height: auto;
+.continue {
+  color: #000;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
