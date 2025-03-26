@@ -118,6 +118,8 @@ main {
 /* BUTTONS */
 .add-to-cart-button {
   font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   background-color: #f6861e;
   color: #000000;
   border-color: transparent;

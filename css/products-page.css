@@ -10,10 +10,9 @@
   padding: 20px 20px 30px 20px;
 }
 
-.category {
-  text-align: center;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
+.category a {
+  text-decoration: none;
+  color: #000;
 }
 
 .all-items {
@@ -22,8 +21,9 @@
   text-decoration-thickness: 1px;
 }
 
-.sale {
+.sale a {
   color: red;
+  text-decoration: none;
 }
 
 .product-img {
@@ -47,6 +47,7 @@
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  gap: 7px;
 }
 .products {
   display: flex;
