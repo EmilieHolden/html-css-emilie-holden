@@ -5,12 +5,50 @@
 
 .box {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (> 600px) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .information-container,
 .summary-container {
   border: solid #ccc9c9;
   padding: 30px;
+  line-height: 2;
+}
+
+.order-product-img {
+  max-width: 105px;
+  min-height: auto;
+}
+
+.order-products {
+  border-bottom: solid #ccc9c9;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.order-name-size-qty {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.confirmation-shipping-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.confirmation-total-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }

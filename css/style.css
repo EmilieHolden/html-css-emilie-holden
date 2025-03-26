@@ -46,6 +46,11 @@ main {
 .header-logo {
   max-width: 173px;
   max-height: 100%;
+
+  @media (width > 600px) {
+    max-width: 173px;
+    max-height: 100%;
+  }
 }
 
 /* NAVIGATION */
@@ -102,9 +107,6 @@ main {
 
 .homepage-nav a {
   text-decoration: none;
-}
-
-.nav-header {
 }
 
 .mobile-icon {

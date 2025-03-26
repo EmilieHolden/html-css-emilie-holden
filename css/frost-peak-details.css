@@ -1,9 +1,9 @@
-.main-boxes {
+.main-box {
   border: solid #ccc9c9;
   padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  margin: 0 20px;
 
   @media (width >600px) {
     display: grid;
@@ -34,7 +34,7 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .color:hover {

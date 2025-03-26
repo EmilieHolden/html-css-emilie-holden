@@ -57,9 +57,9 @@
         />
       </div>
     </header>
-    <main>
+    <main class="payment-main">
       <h1>Checkout</h1>
-      <div class="payment-details-main">
+      <div class="payment-details-content">
         <section>
           <div class="payment-details-container">
             <h2>Payment details</h2>
@@ -184,6 +184,17 @@
                     required
                   />
                 </div>
+                <div class="payment-solutions">
+                  <img
+                    src="rainydays-images/PayQuick logo.png"
+                    alt="PayQuick payment solution"
+                  />
+                  <img
+                    src="rainydays-images/YippiPay Logo.png"
+                    alt="YippiPay payment solution"
+                  />
+                </div>
+                <a href="confirmation-page.html" class="checkout">Checkout</a>
               </section>
             </form>
           </div>
@@ -191,23 +202,26 @@
 
         <section class="right.checkout">
           <h2>Order summary</h2>
-          <div class="order-summary-content">
-            <p>1 items in cart</p>
-
-            <img
-              src="rainydays-images/jacket1.jpg"
-              alt="red jacket with zipper"
-              class="payment-details-img"
-            />
-            <p>Frost Peak</p>
-            <p>42</p>
-            <p>Qty: 1</p>
-            <p>1500 nok</p>
-            <div>
+          <div class="summary-container">
+            <p class="summary-item-number">1 items in cart</p>
+            <div class="order-summary-content">
+              <img
+                src="rainydays-images/jacket1.jpg"
+                alt="red jacket with zipper"
+                class="payment-details-img"
+              />
+              <div class="summary-name-size-qty">
+                <p>Frost Peak</p>
+                <p>42</p>
+                <p>Qty: 1</p>
+              </div>
+              <p class="summary-product-price">1500 nok</p>
+            </div>
+            <div class="summary-shipping-box">
               <p>Shipping</p>
               <p>0 nok</p>
             </div>
-            <div>
+            <div class="summary-total-box">
               <p>Total</p>
               <p>1500 nok</p>
             </div>
