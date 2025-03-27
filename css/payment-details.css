@@ -4,7 +4,7 @@
 
 .payment-details-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 30px;
 
   @media (width > 600px) {
