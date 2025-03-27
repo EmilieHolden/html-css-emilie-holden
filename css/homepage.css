@@ -155,6 +155,10 @@
   font-size: 21px;
 }
 
+.label-email {
+  color: transparent;
+}
+
 .submit-button {
   background-color: #0a3641;
   color: #fff;

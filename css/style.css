@@ -133,13 +133,13 @@ main {
 footer {
   width: 100%;
   height: 283px;
-  background-color: #66848a;
+  background-color: #51757c;
   color: #fff;
 }
 
 footer p {
   color: #fff;
-  font-size: 14;
+  font-size: 20px;
   text-align: center;
   padding-top: 30px;
   margin-top: 40px;

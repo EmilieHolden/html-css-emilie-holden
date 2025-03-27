@@ -1,5 +1,5 @@
 .thank-you-box {
-  border: solid #ccc9c9;
+  width: fit-content;
   padding: 20px;
 }
 
@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 20px;
 
-  @media (> 600px) {
+  @media (width > 600px) {
     display: flex;
     flex-direction: row;
     gap: 30px;

@@ -22,13 +22,17 @@
   padding: 20px 0px;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 30px;
 }
 
 .product-name-size-qty {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.product-price {
+  text-align: right;
 }
 
 .shipping-box {
