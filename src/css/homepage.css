@@ -10,7 +10,11 @@
 .homepage-logo-container {
   display: flex;
   justify-content: center;
-  padding-top: 70px;
+  padding-top: 50px;
+
+  @media (width > 900px) {
+    padding-top: 70px;
+  }
 }
 
 .homepage-logo {
@@ -148,7 +152,7 @@
 }
 
 .homepage-product-img {
-  width: 150px;
+  width: 110px;
   height: 170px;
   object-fit: cover;
 
