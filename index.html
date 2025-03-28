@@ -25,13 +25,13 @@
     <header class="homepage-header">
       <nav class="homepage-nav">
         <ul>
-          <li>
+          <li class="nav-list-item">
             <a href="index.html"
               ><span class="desktop-homepage-nav">Home</span
               ><i class="fa-thin fa-house nav-icon mobile-icon"></i
             ></a>
           </li>
-          <li>
+          <li class="nav-list-item">
             <a href="products-page.html">
               <span class="desktop-homepage-nav">Products</span
               ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i
@@ -60,7 +60,7 @@
       <section class="sale-container">
         <div class="valentinesday-sale">
           <p class="text-sale">25% off on our Valentines day sale</p>
-          <a href="coming-soon.html" class="sale-button">Go to sale</a>
+          <a href="coming-soon.html" class="sale-button cta">Go to sale</a>
         </div>
       </section>
 
@@ -74,7 +74,7 @@
               class="homepage-product-img"
             />
             <h3>Frost Peak</h3>
-            <a href="frost-peak-details.html" class="add-to-cart-button"
+            <a href="frost-peak-details.html" class="add-to-cart-button cta"
               >Add to cart</a
             >
           </div>
@@ -85,7 +85,7 @@
               class="homepage-product-img"
             />
             <h3>Flex Athletic</h3>
-            <a href="coming-soon.html" class="add-to-cart-button"
+            <a href="coming-soon.html" class="add-to-cart-button cta"
               >Add to cart</a
             >
           </div>
@@ -102,7 +102,7 @@
               class="homepage-product-img"
             />
             <h3>Frost Barrier</h3>
-            <a href="coming-soon.html" class="add-to-cart-button"
+            <a href="coming-soon.html" class="add-to-cart-button cta"
               >Add to cart</a
             >
           </div>
@@ -113,7 +113,7 @@
               class="homepage-product-img"
             />
             <h3>Polar Pulse</h3>
-            <a href="coming-soon.html" class="add-to-cart-button"
+            <a href="coming-soon.html" class="add-to-cart-button cta"
               >Add to cart</a
             >
           </div>
@@ -125,9 +125,14 @@
           <p class="subscribtion-text">
             Subscribe to our newsletter to get 10% on your first order
           </p>
-          <label for="email" class="label-email">email</label>
-          <input type="email" name="email" id="email" placeholder="E-mail" />
-          <button class="submit-button">Submit</button>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            aria-label="email"
+            placeholder="E-mail"
+          />
+          <button class="submit-button cta">Submit</button>
         </form>
       </section>
     </main>

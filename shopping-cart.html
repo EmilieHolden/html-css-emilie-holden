@@ -19,16 +19,16 @@
     />
   </head>
   <body>
-    <header class="nav-header">
+    <header>
       <nav class="homepage-nav">
         <ul>
-          <li>
+          <li class="nav-list-item">
             <a href="index.html"
               ><span class="desktop-homepage-nav">Home</span
               ><i class="fa-thin fa-house nav-icon mobile-icon"></i
             ></a>
           </li>
-          <li>
+          <li class="nav-list-item">
             <a href="products-page.html">
               <span class="desktop-homepage-nav">Products</span
               ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i
@@ -54,7 +54,7 @@
         />
       </div>
     </header>
-    <main class="shopping-cart-container">
+    <main class="shopping-cart-container summary-container">
       <h1>Shopping cart</h1>
       <p class="item-number">1 items in cart</p>
       <div class="in-cart">
@@ -65,22 +65,22 @@
         />
         <div class="product-name-size-qty">
           <p>Frost Peak</p>
-          <p>42</p>
-          <p>- 1 +</p>
+          <p>Size: 42</p>
+          <p>Qty: 1</p>
         </div>
         <p class="product-price">1500 nok</p>
       </div>
-      <div class="shipping-box">
+      <div class="summary-detail-box">
         <p>Shipping</p>
         <p>0 nok</p>
       </div>
-      <div class="total-box">
+      <div class="summary-detail-box">
         <p>Total</p>
         <p>1500 nok</p>
       </div>
 
       <div class="checkout-continue">
-        <a href="payment-details.html" class="pay-now">Pay now</a>
+        <a href="payment-details.html" class="pay-now-button cta">Pay now</a>
         <a href="products-page.html" class="continue">Continue shopping</a>
       </div>
     </main>

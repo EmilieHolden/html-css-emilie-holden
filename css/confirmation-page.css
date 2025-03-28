@@ -15,40 +15,8 @@
   }
 }
 
-.information-container,
-.summary-container {
+.information-container {
   border: solid #ccc9c9;
   padding: 30px;
   line-height: 2;
-}
-
-.order-product-img {
-  max-width: 105px;
-  min-height: auto;
-}
-
-.order-products {
-  border-bottom: solid #ccc9c9;
-  padding: 20px 0px;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.order-name-size-qty {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.confirmation-shipping-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-
-.confirmation-total-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
 }
