@@ -4,10 +4,13 @@
   gap: 30px;
 
   @media (width > 600px) {
-    display: flex;
     flex-direction: row;
     gap: 30px;
   }
+}
+
+.payment-details-form-container {
+  width: 100%;
 }
 
 .form-input {

@@ -28,6 +28,7 @@
   width: 52px;
   background: #706548;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .product-info {
@@ -37,9 +38,6 @@
 }
 
 .color:hover {
-  height: 50px;
-  width: 50px;
-  background: #706548;
   border-style: solid;
   border-color: black;
   border-width: 3px;
@@ -47,21 +45,16 @@
 
 .size {
   font-size: 17px;
-  background: #fff;
+  border: 3px solid #ccc9c9;
   border-radius: 50%;
-  border-style: solid;
-  border-color: #3c3a3a;
   color: #3c3a3a;
   padding: 15px;
+  cursor: pointer;
 }
 
 .size:hover {
-  height: 50px;
-  width: 50px;
-  background: #fff;
   border-style: solid;
   border-color: black;
-  border-width: 3px;
 }
 
 .size-selector {

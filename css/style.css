@@ -34,6 +34,7 @@ main {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+  min-height: 100vh;
 }
 
 /* HEADER */
@@ -187,6 +188,7 @@ footer p {
 .summary-container {
   border: solid #ccc9c9;
   padding: 20px;
+  text-wrap: nowrap;
 }
 
 .checkout-product-img {
