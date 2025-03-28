@@ -17,7 +17,7 @@
   width: 200px;
   height: auto;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     width: 447px;
   }
 }
@@ -27,13 +27,13 @@
   grid-template-columns: 1fr;
   gap: 1.5rem;
 
-  @media (width > 700px) {
+  @media (width > 900px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
 }
 
-@media (width > 700px) {
+@media (width > 900px) {
   .subscribtion-container {
     grid-area: 5 / 1 / 7 /2;
   }
@@ -58,11 +58,6 @@
   gap: 1rem;
 }
 
-.new-collection,
-.bestsellers {
-  margin: 0 10px;
-}
-
 .valentinesday-sale {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../rainydays-images/sales-img.jpg");
@@ -77,7 +72,7 @@
   justify-content: center;
   gap: 1rem;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     height: 100%;
   }
 }
@@ -88,7 +83,7 @@
   text-align: center;
   margin: 0 1rem;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     padding-top: 100px;
     font-size: 44px;
   }
@@ -101,7 +96,7 @@
   padding: 10px;
   gap: 10px;
 
-  @media (width < 600px) {
+  @media (width < 900px) {
     display: block;
   }
 }
@@ -112,7 +107,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (width < 600px) {
+  @media (width < 900px) {
     display: none;
   }
 }
@@ -153,11 +148,11 @@
 }
 
 .homepage-product-img {
-  width: 60px;
-  height: 70px;
+  width: 150px;
+  height: 170px;
   object-fit: cover;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     width: 330px;
     height: 350px;
   }

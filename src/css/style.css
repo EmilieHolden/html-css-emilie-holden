@@ -60,7 +60,7 @@ main {
   max-width: 100px;
   max-height: 100%;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     max-width: 173px;
   }
 }
@@ -71,7 +71,7 @@ main {
   padding: 17px 21px;
   color: #fff;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     display: flex;
     justify-content: end;
   }
@@ -94,7 +94,7 @@ main {
 .desktop-homepage-nav {
   display: none;
 
-  @media (width >600px) {
+  @media (width > 900px) {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -107,7 +107,7 @@ main {
 }
 
 .nav-list-item .mobile-icon {
-  @media (width > 600px) {
+  @media (width > 900px) {
     display: none;
   }
 }
@@ -179,7 +179,7 @@ footer p {
   padding: 10px;
   font-size: 20px;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     font-size: 38px;
   }
 }
@@ -189,6 +189,7 @@ footer p {
   border-radius: 10px;
   width: 100%;
   padding: 3px 0;
+  border: 0;
 }
 
 /*COMPONENTS */

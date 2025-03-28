@@ -27,7 +27,7 @@
   width: auto;
   padding: 20px 10px 0 10px;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     height: 315px;
     width: fit-content;
     padding: 20px;

@@ -3,7 +3,7 @@
   flex-direction: column-reverse;
   gap: 30px;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     flex-direction: row;
     gap: 30px;
   }
@@ -35,7 +35,7 @@
   border: solid #ccc9c9;
   padding: 20px;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -54,7 +54,7 @@
   border: solid #ccc9c9;
   padding: 20px;
 
-  @media (width > 600px) {
+  @media (width > 900px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
