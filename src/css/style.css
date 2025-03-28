@@ -1,3 +1,11 @@
+@import "./homepage.css";
+@import "./frost-peak-details.css";
+@import "./shopping-cart.css";
+@import "./payment-details.css";
+@import "./confirmation-page.css";
+@import "./coming-soon.css";
+@import "./products-page.css";
+
 * {
   box-sizing: border-box;
   margin: 0;

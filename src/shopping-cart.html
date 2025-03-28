@@ -2,14 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="This sporty puffer jacket offers warmth, breathability, and flexibility for active wear."
-    />
+    <meta name="description" content="This is your RainyDays shopping cart." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RainyDays | Frost Peak Jacket</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/frost-peak-details.css" rel="stylesheet" />
+    <title>RainyDays | Shopping cart</title>
+    <link href="/src/css/style.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/9cf112f2f4.js"
       crossorigin="anonymous"
@@ -26,24 +22,24 @@
       <nav class="homepage-nav">
         <ul>
           <li class="nav-list-item">
-            <a href="index.html"
+            <a href="/"
               ><span class="desktop-homepage-nav">Home</span
               ><i class="fa-thin fa-house nav-icon mobile-icon"></i
             ></a>
           </li>
           <li class="nav-list-item">
-            <a href="products-page.html">
+            <a href="/src/products-page.html">
               <span class="desktop-homepage-nav">Products</span
               ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i
             ></a>
           </li>
           <li>
-            <a href="shopping-cart.html"
+            <a href="/src/shopping-cart.html"
               ><i class="fa-thin fa-bag-shopping nav-icon"></i
             ></a>
           </li>
           <li>
-            <a href="coming-soon.html"
+            <a href="/src/coming-soon.html"
               ><i class="fa-thin fa-magnifying-glass nav-icon"></i
             ></a>
           </li>
@@ -51,44 +47,45 @@
       </nav>
       <div class="orange-header">
         <img
-          src="rainydays-images/RainyDays_Logo.png"
+          src="/src/rainydays-images/RainyDays_Logo.png"
           alt="RainyDays logo"
           class="header-logo"
         />
       </div>
     </header>
     <main>
-      <div class="main-box">
-        <img
-          src="rainydays-images/jacket1.jpg"
-          alt="red jacket with zipper"
-          class="image-product-details"
-        />
-        <div class="product-info">
-          <h1>Frost Peak</h1>
-          <h2>1500 nok</h2>
-          <h3>Color:</h3>
-          <div class="color"></div>
-          <h3>Size:</h3>
-          <div class="size-selector">
-            <div class="size"><p>42</p></div>
-            <div class="size"><p>44</p></div>
-            <div class="size"><p>46</p></div>
+      <div class="shopping-cart-container summary-container">
+        <h1>Shopping cart</h1>
+        <p class="item-number">1 items in cart</p>
+        <div class="in-cart">
+          <img
+            src="/src/rainydays-images/jacket1.jpg"
+            alt="red jacket with zipper"
+            class="checkout-product-img"
+          />
+          <div class="product-name-size-qty">
+            <p>Frost Peak</p>
+            <p>Size: 42</p>
+            <p>Qty: 1</p>
           </div>
-          <a href="shopping-cart.html" class="add-to-cart-button cta"
-            >Add to cart</a
+          <p class="product-price">1500 nok</p>
+        </div>
+        <div class="summary-detail-box">
+          <p>Shipping</p>
+          <p>0 nok</p>
+        </div>
+        <div class="summary-detail-box">
+          <p>Total</p>
+          <p>1500 nok</p>
+        </div>
+
+        <div class="checkout-continue">
+          <a href="/src/payment-details.html" class="pay-now-button cta"
+            >Pay now</a
           >
-          <h3>Description:</h3>
-          <p>
-            This sporty puffer jacket offers warmth, breathability, and
-            flexibility for active wear. Made from good quality down, it keeps
-            you dry and comfortable during workouts or outdoor activities. The
-            full-zip design allows for easy ventilation, while the ergonomic fit
-            ensures freedom of movement. Featuring zippered pockets for secure
-            storage and a sleek, athletic style, this jacket is perfect for
-            staying active or layering up for a casual look. Ideal for any sport
-            or outdoor adventure.
-          </p>
+          <a href="/src/products-page.html" class="continue"
+            >Continue shopping</a
+          >
         </div>
       </div>
     </main>
