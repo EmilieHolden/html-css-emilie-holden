@@ -161,3 +161,35 @@
     height: 350px;
   }
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  border-style: solid;
+  border-color: #ccc9c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+
+.card-image {
+  width: 110px;
+  height: 170px;
+  object-fit: cover;
+
+  @media (width > 900px) {
+    width: 330px;
+    height: 350px;
+  }
+}
+
+/*.card-content
+
+.card-title .card-price;

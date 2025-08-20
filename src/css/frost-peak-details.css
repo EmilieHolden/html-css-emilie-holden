@@ -1,4 +1,4 @@
-.main-box {
+.container {
   border: solid #ccc9c9;
   padding: 40px;
   display: flex;
@@ -18,7 +18,7 @@
   grid-area: 1 / 2 / 2 / 3;
 }
 
-.image-product-details {
+.product-image {
   max-width: 556px;
   max-height: auto;
 }
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.product-info {
+.product-description {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -61,4 +61,26 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.card {
+  border-style: solid;
+  border-color: #ccc9c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+
+.card-image {
+  width: 110px;
+  height: 170px;
+  object-fit: cover;
+
+  @media (width > 900px) {
+    width: 330px;
+    height: 350px;
+  }
 }
