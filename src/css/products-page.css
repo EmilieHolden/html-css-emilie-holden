@@ -22,7 +22,7 @@
   text-decoration: none;
 }
 
-.product-img {
+.card-image {
   height: 300px;
   width: auto;
   padding: 20px 10px 0 10px;
@@ -34,13 +34,13 @@
   }
 }
 
-.product-card {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 7px;
 }
-.products {
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;

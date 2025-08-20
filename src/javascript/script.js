@@ -1,6 +1,16 @@
 const container = document.querySelector("#container")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 
+function getProductLink(productId) {
+    const currentFile = window.location.href.split("/").pop();
+
+    if (currentFile === "index.html" || currentFile === "") {
+        return `./src/frost-peak-details.html?id=${productId}`;
+    } else {
+        return `./frost-peak-details.html?id=${productId}`;
+    }
+}
+
 async function fetchAndCreateProducts(params) {
 
 }
@@ -29,7 +39,7 @@ async function fetchAndCreateProducts() {
             image.alt = product.image.alt
             title.textContent = product.title
             price.textContent = product.price
-            anchor.href = `src/frost-peak-details.html?id=${product.id}`
+            anchor.href = getProductLink(product.id);
 
 
             content.appendChild(title)
