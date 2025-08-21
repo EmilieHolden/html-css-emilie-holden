@@ -27,6 +27,7 @@ async function fetchAndCreateProducts() {
             const content = document.createElement("div")
             const title = document.createElement("h2")
             const price = document.createElement("p")
+            const discountedPrice = document.createElement("p")
             const anchor = document.createElement("a")
 
             card.className = 'card'
@@ -34,16 +35,19 @@ async function fetchAndCreateProducts() {
             content.className = 'card-content'
             title.className = 'card-title'
             price.className = 'card-price'
+            discountedPrice.className = 'card-discounted-price'
 
             image.src = product.image.url
             image.alt = product.image.alt
             title.textContent = product.title
             price.textContent = product.price
+            discountedPrice.textContent = product.discountedPrice
             anchor.href = getProductLink(product.id);
 
 
             content.appendChild(title)
             content.appendChild(price)
+            content.appendChild(discountedPrice)
             card.appendChild(image)
             card.appendChild(content)
             anchor.appendChild(card)
