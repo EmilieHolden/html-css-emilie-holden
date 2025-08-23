@@ -1,5 +1,9 @@
 const container = document.querySelector("#container")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
+const cart = document.querySelector(".cart")
+const cartList = document.querySelector(".cart-list")
+const totalContainer = document.querySelector(".total")
+let cartArray = [];
 
 function getProductLink(productId) {
     const currentFile = window.location.href.split("/").pop();
@@ -11,9 +15,6 @@ function getProductLink(productId) {
     }
 }
 
-async function fetchAndCreateProducts(params) {
-
-}
 
 async function fetchAndCreateProducts() {
     try {
@@ -28,7 +29,8 @@ async function fetchAndCreateProducts() {
             const title = document.createElement("h2")
             const price = document.createElement("p")
             const discountedPrice = document.createElement("p")
-            const anchor = document.createElement("a")
+            const addToCartButton = document.createElement("button")
+            //const anchor = document.createElement("a")
 
             card.className = 'card'
             image.className = 'card-image'
@@ -36,28 +38,69 @@ async function fetchAndCreateProducts() {
             title.className = 'card-title'
             price.className = 'card-price'
             discountedPrice.className = 'card-discounted-price'
+            addToCartButton.className = 'add-to-cart-button'
 
             image.src = product.image.url
             image.alt = product.image.alt
             title.textContent = product.title
             price.textContent = product.price
             discountedPrice.textContent = product.discountedPrice
-            anchor.href = getProductLink(product.id);
+            addToCartButton.textContent = "Add to cart";
+            addToCartButton.setAttribute("data-product", product.id)
 
+            addToCartButton.onclick = function (event) {
+                const itemToAdd = products.find(item => item.id === event.target.dataset.product);
+                cartArray.push(itemToAdd);
+                showCart(cartArray);
+                localStorage.setItem("cartList", JSON.stringify(cartArray));
+            }
 
             content.appendChild(title)
             content.appendChild(price)
             content.appendChild(discountedPrice)
             card.appendChild(image)
             card.appendChild(content)
-            anchor.appendChild(card)
+            content.appendChild(addToCartButton)
+            // anchor.appendChild(card)
 
-            container.appendChild(anchor)
+            //container.appendChild(anchor)
+
+            container.appendChild(card)
+
         })
+
+        // anchor.href = getProductLink(product.id);
+
+
+
+
+
+
     } catch (error) {
         console.error("Failed to fetch and create products", error)
         container.textContent = 'Failed to load products'
     }
+
+}
+
+function showCart(cartItems) {
+    cart.style.display = "block";
+    cartList.innerHTML = "";
+    let total = 0;
+    cartItems.forEach(function (cartElement) {
+        total += cartElement.price;
+        cartList.innerHTML += `
+            <div class="cart-item">
+            <h4>${cartElement.title}</h4>
+            <img src="${cartElement.image.url}" alt="${cartElement.image.alt}" class="cart-image">
+            </div>`;
+
+
+    })
+    totalContainer.innerHTML = `Total: ${total}`;
 }
 
 fetchAndCreateProducts()
+
+
+

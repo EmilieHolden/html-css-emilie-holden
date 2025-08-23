@@ -190,6 +190,10 @@
   }
 }
 
+.cart {
+  display: none;
+}
+
 /*.card-content
 
-.card-title .card-price;
+.card-title .card-price;*/

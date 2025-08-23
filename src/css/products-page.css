@@ -46,3 +46,7 @@
   gap: 16px;
   border: solid #ccc9c9;
 }
+
+.cart {
+  display: none;
+}
