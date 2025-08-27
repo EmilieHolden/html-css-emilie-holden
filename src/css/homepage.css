@@ -48,7 +48,7 @@
     grid-area: 4 / 2 / 7 / 3;
   }
   .sale-container {
-    grid-area: 1 / 1 / 5 / 2;
+    grid-area: 1 / 1 / 1 / 2;
   }
 }
 
@@ -160,12 +160,6 @@
     width: 330px;
     height: 350px;
   }
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
 }
 
 .card {

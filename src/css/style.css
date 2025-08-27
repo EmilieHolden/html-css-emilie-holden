@@ -147,6 +147,7 @@ footer p {
   border-radius: 17px;
   padding: 10px 20px 10px 20px;
   box-shadow: 5px 5px 25px -10px #000;
+  border: none;
 }
 
 .add-to-cart-button {
@@ -200,7 +201,7 @@ footer p {
   text-wrap: nowrap;
 }
 
-.checkout-product-img {
+.cart-image {
   max-width: 105px;
   min-height: auto;
 }
@@ -233,4 +234,8 @@ footer p {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+}
+
+.card-discounted-price {
+  color: red;
 }

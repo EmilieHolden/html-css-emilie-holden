@@ -1,9 +1,13 @@
+import { getProducts } from "./products.js";
+
 const container = document.querySelector("#container")
-const API_URL = "https://v2.api.noroff.dev/rainy-days"
 const cart = document.querySelector(".cart")
 const cartList = document.querySelector(".cart-list")
 const totalContainer = document.querySelector(".total")
-let cartArray = [];
+let cartArray = JSON.parse(localStorage.getItem("cartList")) || [];
+showCart(cartArray);
+let loading = false
+
 
 function getProductLink(productId) {
     const currentFile = window.location.href.split("/").pop();
@@ -17,20 +21,25 @@ function getProductLink(productId) {
 
 
 async function fetchAndCreateProducts() {
+
     try {
-        const response = await fetch(API_URL)
-        const data = await response.json()
+        loading = true
+        container.innerHTML = "<p>Loading...</p>";
+
+        // For debugging loading/delaying fetch: await new Promise(resolve => setTimeout(resolve, 1000));
+        const data = await getProducts();
         const products = data.data
 
+        container.innerHTML = "";
+
         products.forEach(product => {
-            const card = document.createElement("div")
+            const card = document.createElement("a")
             const image = document.createElement("img")
             const content = document.createElement("div")
             const title = document.createElement("h2")
             const price = document.createElement("p")
             const discountedPrice = document.createElement("p")
             const addToCartButton = document.createElement("button")
-            //const anchor = document.createElement("a")
 
             card.className = 'card'
             image.className = 'card-image'
@@ -38,8 +47,9 @@ async function fetchAndCreateProducts() {
             title.className = 'card-title'
             price.className = 'card-price'
             discountedPrice.className = 'card-discounted-price'
-            addToCartButton.className = 'add-to-cart-button'
+            addToCartButton.className = 'add-to-cart-button cta'
 
+            card.href = getProductLink(product.id);
             image.src = product.image.url
             image.alt = product.image.alt
             title.textContent = product.title
@@ -48,39 +58,42 @@ async function fetchAndCreateProducts() {
             addToCartButton.textContent = "Add to cart";
             addToCartButton.setAttribute("data-product", product.id)
 
-            addToCartButton.onclick = function (event) {
-                const itemToAdd = products.find(item => item.id === event.target.dataset.product);
-                cartArray.push(itemToAdd);
-                showCart(cartArray);
-                localStorage.setItem("cartList", JSON.stringify(cartArray));
+            if (product.onSale) {
+                content.appendChild(discountedPrice)
+            } else {
+                content.appendChild(price)
             }
 
             content.appendChild(title)
-            content.appendChild(price)
-            content.appendChild(discountedPrice)
             card.appendChild(image)
             card.appendChild(content)
             content.appendChild(addToCartButton)
-            // anchor.appendChild(card)
-
-            //container.appendChild(anchor)
-
             container.appendChild(card)
 
+            addToCart(addToCartButton, products)
+
+
         })
-
-        // anchor.href = getProductLink(product.id);
-
-
-
-
-
-
     } catch (error) {
         console.error("Failed to fetch and create products", error)
         container.textContent = 'Failed to load products'
+    } finally {
+        loading = false
     }
 
+}
+
+
+
+
+function addToCart(addToCartButton, products) {
+    addToCartButton.onclick = function (event) {
+        event.preventDefault();
+        const itemToAdd = products.find(item => item.id === event.target.dataset.product);
+        cartArray.push(itemToAdd);
+        showCart(cartArray);
+        localStorage.setItem("cartList", JSON.stringify(cartArray));
+    }
 }
 
 function showCart(cartItems) {
