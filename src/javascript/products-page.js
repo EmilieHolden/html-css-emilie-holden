@@ -20,7 +20,7 @@ function getProductLink(productId) {
 }
 
 
-async function fetchAndCreateProducts() {
+async function fetchAndCreateProducts(filteredProducts = null) {
 
     try {
         loading = true
@@ -29,6 +29,10 @@ async function fetchAndCreateProducts() {
         // For debugging loading/delaying fetch: await new Promise(resolve => setTimeout(resolve, 1000));
         const data = await getProducts();
         let products = data.data
+
+        if (filteredProducts) {
+            products = filteredProducts
+        }
 
         container.innerHTML = "";
 
@@ -83,6 +87,8 @@ async function fetchAndCreateProducts() {
 
 }
 
+
+
 function addToCart(addToCartButton, products) {
     addToCartButton.onclick = function (event) {
         event.preventDefault();
@@ -97,27 +103,12 @@ function showCart(cartItems) {
     cart.style.display = "block";
     cartList.innerHTML = "";
     let total = 0;
-
-    const grouped = new Map();
-
-    cartItems.forEach(item => {
-        total += item.price;
-
-        if (grouped.has(item.id)) {
-            grouped.get(item.id).quantity += 1;
-        } else {
-            grouped.set(item.id, {
-                ...item,
-                quantity: 1
-            })
-        }
-    })
-
-    grouped.forEach(item => {
+    cartItems.forEach(function (cartElement) {
+        total += cartElement.price;
         cartList.innerHTML += `
             <div class="cart-item">
-            <h4>${item.title} - Quantity:${item.quantity}</h4>
-            <img src="${item.image.url}" alt="${item.image.alt}" class="cart-image">
+            <h4>${cartElement.title}</h4>
+            <img src="${cartElement.image.url}" alt="${cartElement.image.alt}" class="cart-image">
             </div>`;
 
 
@@ -125,7 +116,38 @@ function showCart(cartItems) {
     totalContainer.innerHTML = `Total: ${total}`;
 }
 
-fetchAndCreateProducts()
+const filterAll = document.getElementById("filter-all");
+const filterWomen = document.getElementById("filter-women");
+const filterMen = document.getElementById("filter-men");
+const filterSale = document.getElementById("filter-sale");
+
+let allProducts = [];
+
+getProducts().then(data => {
+    allProducts = data.data;
+    fetchAndCreateProducts(allProducts);
+});
+
+filterAll.addEventListener("click", () => {
+    fetchAndCreateProducts(allProducts);
+});
+
+filterWomen.addEventListener("click", () => {
+    const filtered = allProducts.filter(product => product.gender?.toLowerCase() === "female");
+    fetchAndCreateProducts(filtered);
+});
+
+filterMen.addEventListener("click", () => {
+    const filtered = allProducts.filter(product => product.gender?.toLowerCase() === "male");
+    fetchAndCreateProducts(filtered);
+});
+
+filterSale.addEventListener("click", () => {
+    const filtered = allProducts.filter(product => product.onSale === true);
+    fetchAndCreateProducts(filtered);
+});
+
+
 
 
 
