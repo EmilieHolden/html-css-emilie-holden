@@ -9,6 +9,8 @@
       src="https://kit.fontawesome.com/9cf112f2f4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./javascript/products-page.js" defer type="module"></script>
+    <script src="./javascript/shopping-cart.js" defer></script>
     <link href="./css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,29 +66,10 @@
           <p>Order confirmation and receipt will be sent to your email.</p>
           <p>Welcome back next time!</p>
         </div>
-        <div class="summary-container">
-          <h2>Order summary</h2>
-          <div class="in-cart">
-            <img
-              src="./rainydays-images/jacket1.jpg"
-              alt="red jacket with zipper"
-              class="checkout-product-img"
-            />
-            <div class="product-name-size-qty">
-              <p>Frost Peak</p>
-              <p>Size: 42</p>
-              <p>Qty: 1</p>
-            </div>
-            <p class="product-price">1500 nok</p>
-          </div>
-          <div class="summary-detail-box">
-            <p>Shipping</p>
-            <p>0 nok</p>
-          </div>
-          <div class="summary-detail-box">
-            <p>Total</p>
-            <p>1500 nok</p>
-          </div>
+        <div class="cart">
+          <div class="cart-list"></div>
+          <div class="total">Total:</div>
+          <a href="/src/shopping-cart.html">Checkout</a>
         </div>
       </section>
     </main>

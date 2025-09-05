@@ -1,11 +1,10 @@
 import { getProducts } from "./products.js";
+import { cartArray, showCart } from "./shopping-cart.js";
 
 const container = document.querySelector("#container")
 const cart = document.querySelector(".cart")
 const cartList = document.querySelector(".cart-list")
 const totalContainer = document.querySelector(".total")
-let cartArray = JSON.parse(localStorage.getItem("cartList")) || [];
-showCart(cartArray);
 let loading = false
 
 
@@ -99,22 +98,7 @@ function addToCart(addToCartButton, products) {
     }
 }
 
-function showCart(cartItems) {
-    cart.style.display = "block";
-    cartList.innerHTML = "";
-    let total = 0;
-    cartItems.forEach(function (cartElement) {
-        total += cartElement.price;
-        cartList.innerHTML += `
-            <div class="cart-item">
-            <h4>${cartElement.title}</h4>
-            <img src="${cartElement.image.url}" alt="${cartElement.image.alt}" class="cart-image">
-            </div>`;
 
-
-    })
-    totalContainer.innerHTML = `Total: ${total}`;
-}
 
 const filterAll = document.getElementById("filter-all");
 const filterWomen = document.getElementById("filter-women");
@@ -146,6 +130,10 @@ filterSale.addEventListener("click", () => {
     const filtered = allProducts.filter(product => product.onSale === true);
     fetchAndCreateProducts(filtered);
 });
+
+showCart(cartArray);
+console.log(cartArray);
+
 
 
 
