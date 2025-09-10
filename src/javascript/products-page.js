@@ -104,19 +104,14 @@ const filterWomen = document.getElementById("filter-women");
 const filterMen = document.getElementById("filter-men");
 const filterSale = document.getElementById("filter-sale");
 
+const data = await getProducts();
+let allProducts = data.data || [];
 
-
-let allProducts = [];
 function setActiveFilter(clickedButton) {
     const filterButtons = document.querySelectorAll(".category")
     filterButtons.forEach(button => button.classList.remove("active"))
     clickedButton.classList.add("active")
 }
-
-getProducts().then(data => {
-    allProducts = data.data;
-    fetchAndCreateProducts(allProducts);
-});
 
 filterAll.addEventListener("click", () => {
     setActiveFilter(filterAll)
