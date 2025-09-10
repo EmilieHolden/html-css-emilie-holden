@@ -34,12 +34,21 @@
           <li class="nav-list-item">
             <a href="src/products-page.html">
               <span class="desktop-homepage-nav">Products</span
-              ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon" ></i>
+              ><i class="fa-thin fa-clothes-hanger nav-icon mobile-icon"></i>
+            </a>
           </li>
-          <li>
-            <a href="src/shopping-cart.html"
-              ><i class="fa-thin fa-bag-shopping nav-icon"></i
-            ></a>
+          <li class="cart-dropdown-container">
+            <button
+              class="cart-toggle-btn"
+              id="cart-toggle"
+              aria-label="toggle shopping cart"
+            >
+              <i class="fa-thin fa-bag-shopping nav-icon"></i>
+            </button>
+            <div class="cart-dropdown hidden" aria-hidden="true">
+              <div class="cart-list"></div>
+              <div class="total"></div>
+            </div>
           </li>
           <li>
             <a href="src/coming-soon.html"
@@ -59,34 +68,15 @@
       <section class="sale-container">
         <div class="valentinesday-sale">
           <p class="text-sale">25% off on our Valentines day sale</p>
-          <a href="src/coming-soon.html" class="sale-button cta">Go to sale</a>
+          <a href="src/products-page.html" class="sale-button cta"
+            >Go to sale</a
+          >
         </div>
       </section>
 
-      <section class="new-collection">
+      <section class="all-products-container">
         <h1 class="h1-homepage">All products</h1>
         <div class="product-container" id="container"></div>
-        <div>
-          <div class="cart-list"></div>
-          <div class="total">Total:</div>
-          <a href="src/shopping-cart.html">Checkout</a>
-        </div>
-      </section>
-      <section class="subscribtion-container">
-        <div class="subscribtion-img"></div>
-        <form class="subscribtion-form">
-          <p class="subscribtion-text">
-            Subscribe to our newsletter to get 10% on your first order
-          </p>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            aria-label="email"
-            placeholder="E-mail"
-          />
-          <button class="submit-button cta">Submit</button>
-        </form>
       </section>
     </main>
   </body>

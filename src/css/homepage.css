@@ -33,19 +33,13 @@
 
   @media (width > 900px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
 @media (width > 900px) {
-  .subscribtion-container {
-    grid-area: 5 / 1 / 7 /2;
-  }
-  .new-collection {
+  .all-products-container {
     grid-area: 1 / 2 / 4 / 3;
-  }
-  .bestsellers {
-    grid-area: 4 / 2 / 7 / 3;
   }
   .sale-container {
     grid-area: 1 / 1 / 1 / 2;
@@ -91,53 +85,6 @@
     padding-top: 100px;
     font-size: 44px;
   }
-}
-
-.subscribtion-container {
-  background-color: #c4d2d4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 10px;
-  gap: 10px;
-
-  @media (width < 900px) {
-    display: block;
-  }
-}
-
-.subscribtion-img {
-  background-image: url("../rainydays-images/sub-img.jpg");
-  width: 250px;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @media (width < 900px) {
-    display: none;
-  }
-}
-
-.subscribtion-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 7px;
-  padding: 60px;
-}
-
-.subscribtion-form input {
-  font-size: 16px;
-  width: 100%;
-  padding: 4px 0 4px 5px;
-  border-radius: 10px;
-  border: 0;
-  box-shadow: rgb(200, 204, 208) 2px 2px 4px 0px inset,
-    rgba(255, 255, 255, 0.3) -2px -2px 4px 1px inset;
-}
-
-.subscribtion-text {
-  font-size: 21px;
 }
 
 .homepage-product-card {
@@ -187,7 +134,3 @@
 .cart {
   display: none;
 }
-
-/*.card-content
-
-.card-title .card-price;*/

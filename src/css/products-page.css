@@ -1,25 +1,28 @@
 .categories-list {
-  font-size: 20px;
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   padding: 20px 20px 30px 20px;
 }
 
-.category a {
-  text-decoration: none;
-  color: #000;
+.categories-list button:hover {
+  border: solid #000;
 }
 
-.all-items {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
+.category.active {
+  border: solid #000;
 }
 
-.sale a {
+.category {
+  font-size: 20px;
+  color: #1f1d1d;
+  background-color: #fff;
+  padding: 10px 20px;
+  border: solid #ccc9c9;
+}
+
+.sale {
   color: red;
-  text-decoration: none;
 }
 
 .card-image {

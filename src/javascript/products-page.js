@@ -1,10 +1,9 @@
 import { getProducts } from "./products.js";
 import { cartArray, showCart } from "./shopping-cart.js";
 
+
+
 const container = document.querySelector("#container")
-const cart = document.querySelector(".cart")
-const cartList = document.querySelector(".cart-list")
-const totalContainer = document.querySelector(".total")
 let loading = false
 
 
@@ -105,7 +104,14 @@ const filterWomen = document.getElementById("filter-women");
 const filterMen = document.getElementById("filter-men");
 const filterSale = document.getElementById("filter-sale");
 
+
+
 let allProducts = [];
+function setActiveFilter(clickedButton) {
+    const filterButtons = document.querySelectorAll(".category")
+    filterButtons.forEach(button => button.classList.remove("active"))
+    clickedButton.classList.add("active")
+}
 
 getProducts().then(data => {
     allProducts = data.data;
@@ -113,26 +119,31 @@ getProducts().then(data => {
 });
 
 filterAll.addEventListener("click", () => {
+    setActiveFilter(filterAll)
     fetchAndCreateProducts(allProducts);
 });
 
 filterWomen.addEventListener("click", () => {
+    setActiveFilter(filterWomen)
     const filtered = allProducts.filter(product => product.gender?.toLowerCase() === "female");
     fetchAndCreateProducts(filtered);
 });
 
 filterMen.addEventListener("click", () => {
+    setActiveFilter(filterMen)
     const filtered = allProducts.filter(product => product.gender?.toLowerCase() === "male");
     fetchAndCreateProducts(filtered);
 });
 
 filterSale.addEventListener("click", () => {
+    setActiveFilter(filterSale)
     const filtered = allProducts.filter(product => product.onSale === true);
     fetchAndCreateProducts(filtered);
 });
 
 showCart(cartArray);
-console.log(cartArray);
+
+
 
 
 

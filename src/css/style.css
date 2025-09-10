@@ -23,6 +23,10 @@ button {
   font-weight: 300;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1 {
   font-size: 27px;
   padding: 0 0 20px 0px;
@@ -36,6 +40,11 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 main {
@@ -157,6 +166,10 @@ footer p {
   margin: 10px;
 }
 
+.add-to-cart-button:hover {
+  border: solid #000;
+}
+
 .pay-now-button {
   width: 100%;
   padding: 20px 15px;
@@ -193,12 +206,23 @@ footer p {
   border: 0;
 }
 
+.add-remove-btn {
+  background-color: white;
+  color: #000;
+  font-weight: 300;
+  font-size: 20px;
+  border: solid #ccc9c9;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+
 /*COMPONENTS */
 
 .summary-container {
   border: solid #ccc9c9;
   padding: 20px;
-  text-wrap: nowrap;
+  text-wrap: wrap;
 }
 
 .cart-image {
@@ -207,35 +231,76 @@ footer p {
 }
 
 .item-number {
-  font-weight: 400;
-  padding: 20px 0 10px 0;
+  font-weight: 300;
+  font-size: 20px;
+  color: #1f1d1d;
 }
 
-.in-cart {
-  border-bottom: solid #ccc9c9;
-  border-top: solid #ccc9c9;
+.cart-item,
+.cart-buttons {
   padding: 20px 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   gap: 30px;
 }
 
-.product-name-size-qty {
+.product-price,
+.card-discounted-price,
+.product-title {
+  color: #1f1d1d;
+}
+
+.summary-box {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: right;
+  padding: 20px 0;
+  border-top: solid #ccc9c9;
+  color: #1f1d1d;
 }
 
-.product-price {
-  text-align: right;
+.cart-dropdown-container {
+  position: relative;
 }
 
-.summary-detail-box {
+.cart-dropdown .cart-item h4,
+h4 {
+  color: #1f1d1d;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.cart-toggle-btn {
+  background: none;
+  border: none;
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: max-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.cart-dropdown.hidden {
+  display: none;
+}
+
+.cart-dropdown .checkout-continue {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  margin-top: 1rem;
 }
 
-.card-discounted-price {
-  color: red;
+.cart-dropdown .cta {
+  display: block;
+  margin-top: 1rem;
+  background-color: #0a3641;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
 }

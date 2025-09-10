@@ -1,3 +1,4 @@
+import { getPath } from "./path-helper.js";
 import { getProducts } from "./products.js";
 import { cartArray, showCart } from "./shopping-cart.js";
 
@@ -18,6 +19,7 @@ function getProductLink(productId) {
 
 
 async function fetchAndCreateProducts() {
+    if (!container) return
 
     try {
         loading = true
@@ -83,7 +85,8 @@ async function fetchAndCreateProducts() {
 function addToCart(addToCartButton, products) {
     addToCartButton.onclick = function (event) {
         event.preventDefault();
-        const itemToAdd = products.find(item => item.id === event.target.dataset.product);
+        const itemToAdd = products.find(item => item.id === event.target.dataset.product)
+
         cartArray.push(itemToAdd);
         showCart(cartArray);
         localStorage.setItem("cartList", JSON.stringify(cartArray));
@@ -94,8 +97,4 @@ function addToCart(addToCartButton, products) {
 
 fetchAndCreateProducts();
 showCart(cartArray);
-console.log(cartArray);
-
-
-
 

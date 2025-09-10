@@ -1,4 +1,4 @@
-const container = document.querySelector("#container")
+const container = document.querySelector("#productDetailsContainer")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 
 async function fetchAndCreateProduct() {
@@ -29,28 +29,28 @@ async function fetchAndCreateProduct() {
         const title = document.createElement("h2")
         const price = document.createElement("p")
         const description = document.createElement("p")
-        const backButton = document.createElement("a")
+        const addToCartButton = document.createElement("button")
 
         productDiv.className = 'product-details'
         image.className = 'product-image'
         title.className = 'product-title'
         price.className = 'product-price'
         description.className = 'product-description'
-        backButton.className = 'back-button'
+        addToCartButton.className = 'add-to-cart-button cta'
 
         image.src = product.image.url
         image.alt = product.image.alt
         title.textContent = product.title
         price.textContent = `$${product.price}`
         description.textContent = product.description
-        backButton.textContent = 'Back to Products'
-        backButton.href = '../index.html'
+        addToCartButton.textContent = "Add to cart";
+        addToCartButton.setAttribute("data-product", product.id)
 
         productDiv.appendChild(image)
         productDiv.appendChild(title)
         productDiv.appendChild(price)
         productDiv.appendChild(description)
-        productDiv.appendChild(backButton)
+        productDiv.appendChild(addToCartButton)
 
         container.appendChild(productDiv)
     } catch (error) {

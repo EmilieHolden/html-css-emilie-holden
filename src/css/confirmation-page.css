@@ -1,22 +1,19 @@
 .thank-you-box {
   width: fit-content;
-  padding: 20px;
 }
 
 .box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
-  @media (width > 900px) {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-  }
+  gap: 10px;
 }
 
-.information-container {
+.information-container,
+.cart {
   border: solid #ccc9c9;
   padding: 30px;
-  line-height: 2;
+}
+
+.order-summary-p {
+  font-size: 20px;
 }
