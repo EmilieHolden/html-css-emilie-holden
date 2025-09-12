@@ -1,4 +1,4 @@
-import { cartArray, showCart } from "./shopping-cart.js";
+import { cartArray, updateCart } from "./shopping-cart.js";
 import { addToCart } from "./script.js";
 
 
@@ -74,4 +74,4 @@ async function fetchAndCreateProduct() {
 }
 
 fetchAndCreateProduct()
-showCart(cartArray);
+updateCart(cartArray);

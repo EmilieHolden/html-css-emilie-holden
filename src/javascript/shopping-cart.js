@@ -1,5 +1,4 @@
-import { getPath } from "./path-helper.js"
-import { getProducts } from "./products.js"
+import { groupById, getPath } from "./helpers.js"
 
 export let cartArray = JSON.parse(localStorage.getItem("cartList")) || []
 
@@ -8,21 +7,7 @@ function renderCart(container, totalContainer) {
 
     container.innerHTML = ""
     let total = 0;
-    const grouped = new Map()
-
-
-    cartArray.forEach(item => {
-        total += item.discountedPrice ?? item.price
-
-        if (grouped.has(item.id)) {
-            grouped.get(item.id).quantity += 1
-        } else {
-            grouped.set(item.id, {
-                ...item,
-                quantity: 1
-            })
-        }
-    })
+    const grouped = groupById(cartArray);
 
     if (!cartArray || cartArray.length === 0) {
         container.innerHTML = "<p>Your cart is empty.</p>"
@@ -31,48 +16,40 @@ function renderCart(container, totalContainer) {
     }
 
     grouped.forEach(item => {
+        const itemPrice = item.discountedPrice ?? item.price
+        const itemTotal = itemPrice
+        total += itemTotal * item.quantity
+
         container.innerHTML += `
-    <div class="cart-item"><img src="${item.image.url}" alt="${item.image.alt}" class="cart-image checkout-product-img"><div class="cart-name-qty-price"><h4>${item.title}</h4><div class="cart-buttons"><button class="increase-btn add-remove-btn" data-id="${item.id}">+</button>
-      <p class="item-number">${item.quantity}</p>
-      <button class="remove-btn add-remove-btn" data-id="${item.id}">-</button>
+    <div class="cart-item"><img src="${item.image.url}" alt="${item.image.alt}" class="cart-image checkout-product-img"><div class="cart-name-qty-price"><h4>${item.title}</h4><div class="cart-buttons">
+     <button class="remove-btn add-remove-btn" data-id="${item.id}">-</button>
+     <p class="item-number">${item.quantity}</p>
+    <button class="increase-btn add-remove-btn" data-id="${item.id}">+</button>
       <button class="remove-all-btn add-remove-btn" data-id="${item.id}">X</button></div>
       <p class="product-price">$${item.discountedPrice ?? item.price}</p></div>
-      
     </div>`;
     });
 
 
     const removeButtons = container.querySelectorAll(".remove-btn")
+
     removeButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const id = button.dataset.id
-            const item = cartArray.find(product => product.id === id)
-            if (item) {
-                removeFromCart(item)
-                showCart(cartArray)
-            }
-        })
+        const id = button.dataset.id
+        removeFromCart(id, button)
     })
 
     const increaseButtons = container.querySelectorAll(".increase-btn")
+
     increaseButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const id = button.dataset.id
-            const item = cartArray.find(product => product.id === id)
-            if (item) {
-                cartArray.push(item)
-                localStorage.setItem("cartList", JSON.stringify(cartArray))
-                showCart(cartArray)
-            }
-        });
+        const id = button.dataset.id
+        increaseProductInCart(id, button)
     });
 
     const removeAllButton = container.querySelectorAll(".remove-all-btn")
+
     removeAllButton.forEach(button => {
-        button.addEventListener("click", () => {
-            const id = button.dataset.id
-            removeAllProducts(id)
-        })
+        const id = button.dataset.id
+        removeAllProducts(id, button)
     })
 
     const paymentDetailsCart = container.classList.contains("payment-details-cart")
@@ -101,7 +78,7 @@ function renderCart(container, totalContainer) {
 }
 
 
-export function showCart() {
+export function updateCart() {
     const dropdownCart = document.querySelector(".cart-dropdown .cart-list")
     const dropdownTotal = document.querySelector(".cart-dropdown .total")
 
@@ -113,21 +90,41 @@ export function showCart() {
 
 }
 
-export function removeFromCart(item) {
-    for (let i = 0; i < cartArray.length; i += 1) {
-        if (cartArray[i].id === item.id) {
-            cartArray.splice(i, 1);
-            localStorage.setItem("cartList", JSON.stringify(cartArray))
-            break
+function removeFromCart(id, button) {
+    button.addEventListener("click", () => {
+        const item = cartArray.find(product => product.id === id)
+        if (item) {
+            for (let i = 0; i < cartArray.length; i += 1) {
+                if (cartArray[i].id === item.id) {
+                    cartArray.splice(i, 1);
+                    localStorage.setItem("cartList", JSON.stringify(cartArray))
+                    break
+                }
+            }
+            updateCart(cartArray)
         }
+    })
 
-    }
 }
 
-export function removeAllProducts(productId) {
-    cartArray = cartArray.filter(product => product.id !== productId)
-    localStorage.setItem("cartList", JSON.stringify(cartArray))
-    showCart(cartArray)
+function increaseProductInCart(id, button) {
+    button.addEventListener("click", () => {
+        const item = cartArray.find(product => product.id === id)
+        if (item) {
+            cartArray.push(item)
+            localStorage.setItem("cartList", JSON.stringify(cartArray))
+            updateCart(cartArray)
+        }
+    });
+}
+
+function removeAllProducts(productId, button) {
+    button.addEventListener("click", () => {
+        cartArray = cartArray.filter(product => product.id !== productId)
+        localStorage.setItem("cartList", JSON.stringify(cartArray))
+        updateCart(cartArray)
+    })
+
 }
 
 export function clearLocalStorage() {
@@ -136,7 +133,7 @@ export function clearLocalStorage() {
 }
 
 
-showCart(cartArray)
+updateCart(cartArray)
 
 const cartToggleBtn = document.getElementById("cart-toggle")
 const cartDropdown = document.querySelector(".cart-dropdown")

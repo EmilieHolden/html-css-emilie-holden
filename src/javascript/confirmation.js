@@ -1,3 +1,4 @@
+import { groupById } from "./helpers.js";
 import { clearLocalStorage } from "./shopping-cart.js";
 import { cartArray } from "./shopping-cart.js";
 
@@ -23,25 +24,13 @@ function showOrderSummary(cartArray) {
         return
     }
 
-    let total = 0
-    const grouped = new Map()
-
-    cartArray.forEach(item => {
-
-        if (grouped.has(item.id)) {
-            grouped.get(item.id).quantity += 1
-        } else {
-            grouped.set(item.id, {
-                ...item,
-                quantity: 1
-            })
-        }
-    })
+    let total = 0;
+    const grouped = groupById(cartArray);
 
     grouped.forEach(item => {
         const itemPrice = item.discountedPrice ?? item.price
-        const itemTotal = itemPrice * item.quantity
-        total += itemTotal
+        const itemTotal = itemPrice
+        total += itemTotal * item.quantity
 
         confirmationOrderSummary.innerHTML += `<div class="cart-item">
                 <img src="${item.image.url}" alt="${item.image.alt}" 
@@ -49,8 +38,8 @@ function showOrderSummary(cartArray) {
                 <div><div class="cart-name-qty-price">
                     <h4>${item.title}</h4>
                     <p class="item-number product-price">Qty: ${item.quantity}</p>
-                    <p class="product-price">$${itemPrice}</p>
-                    <p class="product-price">$${itemTotal.toFixed(2)}</p></div>
+                    <p class="product-price">$${itemPrice.toFixed(2)}</p>
+                </div>
                 </div>
             </div>`
 

@@ -1,33 +1,24 @@
-import { getPath } from "./path-helper.js";
-import { getProducts } from "./products.js";
-import { cartArray, showCart } from "./shopping-cart.js";
+import { getProducts } from "./get-products.js";
+import { getPath } from "./helpers.js";
+import { cartArray, updateCart } from "./shopping-cart.js";
 
 const container = document.querySelector("#container")
 
 let loading = false
 
-
-function getProductLink(productId) {
-    const currentFile = window.location.href.split("/").pop();
-
-    if (currentFile === "index.html" || currentFile === "") {
-        return `./src/frost-peak-details.html?id=${productId}`;
-    } else {
-        return `./frost-peak-details.html?id=${productId}`;
-    }
-}
-
-
-async function fetchAndCreateProducts() {
+export async function fetchAndCreateProducts(filteredProducts = null) {
     if (!container) return
 
     try {
         loading = true
         container.innerHTML = "<p>Loading...</p>";
 
-        // For debugging loading/delaying fetch: await new Promise(resolve => setTimeout(resolve, 1000));
         const data = await getProducts();
         let products = data.data
+
+        if (filteredProducts) {
+            products = filteredProducts
+        }
 
         container.innerHTML = "";
 
@@ -48,7 +39,7 @@ async function fetchAndCreateProducts() {
             discountedPrice.className = 'card-discounted-price'
             addToCartButton.className = 'add-to-cart-button cta'
 
-            card.href = getProductLink(product.id);
+            card.href = getPath(`frost-peak-details.html?id=${product.id}`);
             image.src = product.image.url
             image.alt = product.image.alt
             title.textContent = product.title
@@ -88,7 +79,7 @@ export function addToCart(addToCartButton, products) {
         const itemToAdd = products.find(item => item.id === event.target.dataset.product)
 
         cartArray.push(itemToAdd);
-        showCart(cartArray);
+        updateCart(cartArray);
         localStorage.setItem("cartList", JSON.stringify(cartArray));
 
         const originalTextAddToCartButton = addToCartButton.textContent
@@ -107,5 +98,5 @@ export function addToCart(addToCartButton, products) {
 
 
 fetchAndCreateProducts();
-showCart(cartArray);
+updateCart(cartArray);
 
