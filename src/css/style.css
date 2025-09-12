@@ -285,7 +285,8 @@ footer p {
 }
 
 .cart-dropdown .cart-item h4,
-h4 {
+h4,
+p {
   color: #1f1d1d;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;

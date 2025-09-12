@@ -24,6 +24,11 @@ function renderCart(container, totalContainer) {
         }
     })
 
+    if (!cartArray || cartArray.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>"
+        totalContainer.innerHTML = `<div class="summary-box"><p>Total: 0.00</p>`
+        return
+    }
 
     grouped.forEach(item => {
         container.innerHTML += `
@@ -77,7 +82,7 @@ function renderCart(container, totalContainer) {
 
         totalContainer.innerHTML = `
       <div class="summary-box">
-        <p>Total: ${total.toFixed(2)}</p>
+        <p>Total: $${total.toFixed(2)}</p>
       </div>
       <div class="checkout-continue">
       ${paymentDetailsCart ? '' : `<a href="${getPath("payment-details.html")}" class="pay-now-button cta">Pay now</a>`}

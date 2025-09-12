@@ -18,7 +18,7 @@ function showOrderSummary(cartArray) {
     confirmationOrderSummary.innerHTML = ""
 
     if (!cartArray || cartArray.length === 0) {
-        confirmationOrderSummary.innerHTML = "<p>Your cart is empty</p>"
+        confirmationOrderSummary.innerHTML = "<p>Your cart is empty.</p>"
         confirmationTotal.innerHTML = `<div class="summary-box"><p>Total: 0.00</p>`
         return
     }
