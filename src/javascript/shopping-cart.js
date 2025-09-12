@@ -113,8 +113,6 @@ export function showCart() {
 
 }
 
-
-
 export function removeFromCart(item) {
     for (let i = 0; i < cartArray.length; i += 1) {
         if (cartArray[i].id === item.id) {

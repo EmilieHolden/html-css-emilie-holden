@@ -82,7 +82,7 @@ async function fetchAndCreateProducts() {
 
 }
 
-function addToCart(addToCartButton, products) {
+export function addToCart(addToCartButton, products) {
     addToCartButton.onclick = function (event) {
         event.preventDefault();
         const itemToAdd = products.find(item => item.id === event.target.dataset.product)

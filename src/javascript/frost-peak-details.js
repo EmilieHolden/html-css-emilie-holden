@@ -1,3 +1,7 @@
+import { cartArray, showCart } from "./shopping-cart.js";
+import { addToCart } from "./script.js";
+
+
 const container = document.querySelector("#productDetailsContainer")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 
@@ -50,6 +54,8 @@ async function fetchAndCreateProduct() {
         addToCartButton.textContent = "Add to cart";
         addToCartButton.setAttribute("data-product", product.id)
 
+        addToCart(addToCartButton, [product])
+
         productDiv.appendChild(image)
         descriptionDiv.appendChild(title)
         descriptionDiv.appendChild(description)
@@ -68,3 +74,4 @@ async function fetchAndCreateProduct() {
 }
 
 fetchAndCreateProduct()
+showCart(cartArray);
