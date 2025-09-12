@@ -24,16 +24,20 @@ async function fetchAndCreateProduct() {
             return
         }
 
+        const productDetailsContainer = document.createElement("div")
         const productDiv = document.createElement("div")
+        const descriptionDiv = document.createElement("div")
         const image = document.createElement("img")
         const title = document.createElement("h2")
         const price = document.createElement("p")
         const description = document.createElement("p")
         const addToCartButton = document.createElement("button")
 
+        productDetailsContainer.className = 'product-details-container'
         productDiv.className = 'product-details'
+        descriptionDiv.className = 'description-and-add-to-cart-btn'
         image.className = 'product-image'
-        title.className = 'product-title'
+        title.className = 'product-details-title'
         price.className = 'product-price'
         description.className = 'product-description'
         addToCartButton.className = 'add-to-cart-button cta'
@@ -47,12 +51,16 @@ async function fetchAndCreateProduct() {
         addToCartButton.setAttribute("data-product", product.id)
 
         productDiv.appendChild(image)
-        productDiv.appendChild(title)
-        productDiv.appendChild(price)
-        productDiv.appendChild(description)
-        productDiv.appendChild(addToCartButton)
+        descriptionDiv.appendChild(title)
+        descriptionDiv.appendChild(description)
+        descriptionDiv.appendChild(price)
+        descriptionDiv.appendChild(addToCartButton)
 
-        container.appendChild(productDiv)
+        productDetailsContainer.appendChild(productDiv)
+        productDetailsContainer.appendChild(descriptionDiv)
+
+        container.appendChild(productDetailsContainer)
+
     } catch (error) {
         console.error("Failed to fetch product", error)
         container.textContent = 'Failed to load product'

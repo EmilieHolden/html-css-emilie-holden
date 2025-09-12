@@ -12,7 +12,7 @@ function renderCart(container, totalContainer) {
 
 
     cartArray.forEach(item => {
-        total += item.discountedPrice ?? item.price;
+        total += item.discountedPrice ?? item.price
 
         if (grouped.has(item.id)) {
             grouped.get(item.id).quantity += 1
@@ -36,7 +36,7 @@ function renderCart(container, totalContainer) {
       <p class="item-number">${item.quantity}</p>
       <button class="remove-btn add-remove-btn" data-id="${item.id}">-</button>
       <button class="remove-all-btn add-remove-btn" data-id="${item.id}">X</button></div>
-      <p class="product-price">Price: $${item.discountedPrice ?? item.price}</p></div>
+      <p class="product-price">$${item.discountedPrice ?? item.price}</p></div>
       
     </div>`;
     });

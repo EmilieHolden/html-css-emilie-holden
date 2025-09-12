@@ -157,6 +157,7 @@ footer p {
   padding: 10px 20px 10px 20px;
   box-shadow: 5px 5px 25px -10px #000;
   border: none;
+  cursor: pointer;
 }
 
 .add-to-cart-button {
@@ -270,6 +271,7 @@ footer p {
 .card-discounted-price,
 .product-title {
   color: #1f1d1d;
+  font-size: 15px;
 }
 
 .summary-box {

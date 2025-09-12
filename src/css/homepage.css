@@ -39,7 +39,7 @@
 
 @media (width > 900px) {
   .all-products-container {
-    grid-area: 1 / 2 / 4 / 3;
+    grid-area: 1 / 2 / 3 / 3;
   }
   .sale-container {
     grid-area: 1 / 1 / 1 / 2;

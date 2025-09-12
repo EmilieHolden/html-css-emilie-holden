@@ -46,11 +46,11 @@ function showOrderSummary(cartArray) {
         confirmationOrderSummary.innerHTML += `<div class="cart-item">
                 <img src="${item.image.url}" alt="${item.image.alt}" 
                      class="cart-image checkout-product-img">
-                <div>
+                <div><div class="cart-name-qty-price">
                     <h4>${item.title}</h4>
-                    <p class="item-number">Quantity: ${item.quantity}</p>
-                    <p class="product-price">Price: $${itemPrice}</p>
-                    <p class="product-price">Subtotal: $${itemTotal.toFixed(2)}</p>
+                    <p class="item-number product-price">Qty: ${item.quantity}</p>
+                    <p class="product-price">$${itemPrice}</p>
+                    <p class="product-price">$${itemTotal.toFixed(2)}</p></div>
                 </div>
             </div>`
 
