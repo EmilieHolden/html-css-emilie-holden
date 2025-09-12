@@ -6,3 +6,4 @@ clearLocalStorageButton?.addEventListener("click", () => {
     clearLocalStorage();
     window.location.href = "../index.html"
 })
+

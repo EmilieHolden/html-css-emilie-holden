@@ -90,8 +90,19 @@ function addToCart(addToCartButton, products) {
         cartArray.push(itemToAdd);
         showCart(cartArray);
         localStorage.setItem("cartList", JSON.stringify(cartArray));
+
+        const originalTextAddToCartButton = addToCartButton.textContent
+        addToCartButton.textContent = "Added to cart"
+        addToCartButton.classList.add("add-to-cart-btn-added")
+
+        setTimeout(() => {
+            addToCartButton.textContent = originalTextAddToCartButton
+            addToCartButton.disabled = false
+        }, 2000)
     }
 }
+
+
 
 
 

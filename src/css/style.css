@@ -164,9 +164,14 @@ footer p {
   color: #000000;
   padding: 10px 20px 10px 20px;
   margin: 10px;
+  border: none;
 }
 
 .add-to-cart-button:hover {
+  border: solid #000;
+}
+
+.add-to-cart-btn-added {
   border: solid #000;
 }
 
@@ -303,4 +308,24 @@ h4 {
   color: #fff;
   text-align: center;
   padding: 0.5rem 1rem;
+}
+
+/*LOADING INDICATOR*/
+.ball,
+.ball2,
+.ball3 {
+  margin: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
