@@ -241,12 +241,29 @@ footer p {
   color: #1f1d1d;
 }
 
-.cart-item,
-.cart-buttons {
+.cart-item {
   padding: 20px 0px;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   gap: 30px;
+}
+
+.cart-name-qty-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: end;
+}
+
+.product-price {
+  text-align: right;
 }
 
 .product-price,

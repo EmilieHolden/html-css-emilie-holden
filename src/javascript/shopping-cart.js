@@ -27,11 +27,11 @@ function renderCart(container, totalContainer) {
 
     grouped.forEach(item => {
         container.innerHTML += `
-    <div class="cart-item"><img src="${item.image.url}" alt="${item.image.alt}" class="cart-image checkout-product-img"><div><h4>${item.title}</h4><div class="cart-buttons"><button class="increase-btn add-remove-btn" data-id="${item.id}">+</button>
+    <div class="cart-item"><img src="${item.image.url}" alt="${item.image.alt}" class="cart-image checkout-product-img"><div class="cart-name-qty-price"><h4>${item.title}</h4><div class="cart-buttons"><button class="increase-btn add-remove-btn" data-id="${item.id}">+</button>
       <p class="item-number">${item.quantity}</p>
       <button class="remove-btn add-remove-btn" data-id="${item.id}">-</button>
       <button class="remove-all-btn add-remove-btn" data-id="${item.id}">X</button></div>
-      <p class="product-price">Price: ${item.discountedPrice ?? item.price}</p></div>
+      <p class="product-price">Price: $${item.discountedPrice ?? item.price}</p></div>
       
     </div>`;
     });
@@ -82,16 +82,16 @@ function renderCart(container, totalContainer) {
       <div class="checkout-continue">
       ${paymentDetailsCart ? '' : `<a href="${getPath("payment-details.html")}" class="pay-now-button cta">Pay now</a>`}
         <a href="./products-page.html" class="continue">Continue shopping</a>
-      </div>`;
+      </div>`
     } else {
 
         totalContainer.innerHTML = `
       <div class="summary-box">
-        <p>Total: ${total.toFixed(2)}</p>
+        <p>Total: $${total.toFixed(2)}</p>
       </div>
       <div class="checkout-continue">
         <a href="${getPath("shopping-cart.html")}" class="cta">Go to cart</a>
-      </div>`;
+      </div>`
     }
 }
 
