@@ -1,33 +1,30 @@
 # HTML & CSS Course Assignment
+Rainydays - This project is a responsive e-commerce website for selling jackets, created as a course assignment using HTML, CSS, and JavaScript. I worked on it in to separate assignments. In the first assignment i used only HTML and CSS, before adding functionality in my first JS assignment. It focuses on clean design, good usability and responsive layouts.
 
-## Brief
+Link to live demo: https://emilieholden.github.io/html-css-emilie-holden/
 
-You must deliver a properly functioning, responsive website for the assignment brief you chose in Design 1.
+<img width="1470" height="734" alt="Skjermbilde 2025-12-17 kl  11 56 46" src="https://github.com/user-attachments/assets/3563823b-f462-429e-9d72-49a72a8fdd32" />
 
-The site needs to have every page listed in the site architecture on your chosen brief. Certain functionality requiring JavaScript can be mimicked; for example, a login page could link across from the ‘Sign in’ button.
+### Built With
+ - Javascript
+ - CSS
+ - HTML
 
-- The HTML should be semantic and neat.
-- The CSS should follow the DRY principle and be easy to read.
-- The website should be responsive and look good at every screen size with no horizontal scrollbars. Use Flexbox and CSS Grids where appropriate. Please do not use a CSS framework like Bootstrap; we want to see that you can build responsive sites without the help of a framework.
-- The site should be WCAG compliant, and accessibility should be taken into account.
-- Each page should have a unique <meta name="description">, <title>, and <h1>.
-- You should not use copied code in your submission. All code submitted must be written by yourself. You may use external sources to show you how to achieve specific effects, which should be included in your report.
+### Features
+- Responsive design
+- Add to cart function
+- Dropdown cart
 
-## Process
+### Installation
 
-1. Look at your prototype and consider how the elements will move across the different devices. Which elements move where on different devices?
-2. Write your HTML and CSS, ensuring your HTML is semantic and bug-free and your CSS follows DRY principles.
-3. Use media queries, flex or grid to make your website responsive across screen sizes.
-4. Test your website using your developer tools and also test on major browsers and various devices.
-5. Validate your code using the Markup Validation Service
-6. Use the WAVE Web Accessibility Evaluation Tools to test that your site matches best practices for accessibility
-7. When your site is ready, post it on the Teams peer review channel.
-8. Look at the work of your peers and write a review for them.
-9. Make adjustments based on the feedback you gather from peers and teachers.
-10. Submit here on Teams.
+Follow these steps to get a copy of the project running locally: 
 
-## Delivery
+- Clone the repository: git clone https://github.com/EmilieHolden/Project-Exam-1.git](https://github.com/EmilieHolden/html-css-emilie-holden.git
+- Open the repository: cd html-css-emilie-holden.git
+- Run Live Server
 
-- Please include a link to your live site, deployed on Netlify or GitHub Pages in your submission.
-- Please include a link to your public GitHub repo containing your code in your submission.
-- There is no reflection for this CA.
+### Contact
+
+Emilie Grefstad Holden - e.393@hotmail.com
+
+Project Link: https://github.com/EmilieHolden/Project-Exam-1](https://github.com/EmilieHolden/html-css-emilie-holden
