@@ -27,4 +27,4 @@ Follow these steps to get a copy of the project running locally:
 
 Emilie Grefstad Holden - e.393@hotmail.com
 
-Project Link: https://github.com/EmilieHolden/Project-Exam-1](https://github.com/EmilieHolden/html-css-emilie-holden
+Project Link: https://github.com/EmilieHolden/html-css-emilie-holden
