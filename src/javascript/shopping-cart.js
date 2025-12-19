@@ -102,6 +102,7 @@ function removeFromCart(id, button) {
                 }
             }
             updateCart(cartArray)
+            updateCartCount()
         }
     })
 
@@ -114,6 +115,7 @@ function increaseProductInCart(id, button) {
             cartArray.push(item)
             localStorage.setItem("cartList", JSON.stringify(cartArray))
             updateCart(cartArray)
+            updateCartCount()
         }
     });
 }
@@ -123,6 +125,7 @@ function removeAllProducts(productId, button) {
         cartArray = cartArray.filter(product => product.id !== productId)
         localStorage.setItem("cartList", JSON.stringify(cartArray))
         updateCart(cartArray)
+        updateCartCount()
     })
 
 }
@@ -134,6 +137,7 @@ export function clearLocalStorage() {
 
 
 updateCart(cartArray)
+updateCartCount()
 
 const cartToggleBtn = document.getElementById("cart-toggle")
 const cartDropdown = document.querySelector(".cart-dropdown")
@@ -143,3 +147,16 @@ if (cartToggleBtn && cartDropdown) {
         cartDropdown.classList.toggle("hidden")
     })
 }
+
+export function updateCartCount() {
+    const counter = document.querySelector(".cart-toggle-btn .cart-count");
+    if (!counter) return;
+
+    const cart = JSON.parse(localStorage.getItem("cartList")) || [];
+    const count = cart.length;
+
+    counter.textContent = count;
+    counter.hidden = count === 0;
+}
+
+updateCartCount();

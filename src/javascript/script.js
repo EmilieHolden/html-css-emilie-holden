@@ -1,6 +1,7 @@
 import { getProducts } from "./get-products.js";
 import { getPath } from "./helpers.js";
 import { cartArray, updateCart } from "./shopping-cart.js";
+import { updateCartCount } from "./shopping-cart.js";
 
 const container = document.querySelector("#container")
 
@@ -99,4 +100,5 @@ export function addToCart(addToCartButton, products) {
 
 fetchAndCreateProducts();
 updateCart(cartArray);
+updateCartCount()
 
