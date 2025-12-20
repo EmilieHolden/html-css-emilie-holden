@@ -16,11 +16,11 @@ Link to live demo: https://emilieholden.github.io/html-css-emilie-holden/
 - Dropdown cart
 
 ### Installation
-
 Follow these steps to get a copy of the project running locally: 
 
-- Clone the repository: git clone https://github.com/EmilieHolden/Project-Exam-1.git](https://github.com/EmilieHolden/html-css-emilie-holden.git
-- Open the repository: cd html-css-emilie-holden.git
+- Open Terminal.
+- Change the current working directory to the location where you want the cloned directory.
+- Clone the repository: git clone https://github.com/EmilieHolden/html-css-emilie-holden.git
 - Run Live Server
 
 ### Contact
